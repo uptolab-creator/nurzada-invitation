@@ -523,6 +523,16 @@ export default function App() {
               <TypewriterText text={t.finalMessage} mode="word" delay={0.1} stagger={0.08} once={true} />
             </p>
 
+            {/* Hosts signature: love label + names of the celebration's hosts */}
+            <div className="pt-2">
+              <p className="text-xs uppercase tracking-widest text-brand-accent font-semibold">
+                {t.loveLabel}
+              </p>
+              <p className="font-script text-4xl text-gold-gradient mt-1">
+                {t.hostsNames}
+              </p>
+            </div>
+
             {/* Bottom mini footer with Tunduk watermark spinning slowly */}
             <div className="pt-6 flex justify-center opacity-25">
               <motion.div

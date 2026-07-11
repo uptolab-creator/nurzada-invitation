@@ -49,8 +49,13 @@
 }
 
 .text-gold-gradient {
+  /* Fallback solid color in case background-clip: text isn't supported
+     (some in-app browsers on mobile) — without this the text is fully
+     transparent and invisible instead of just losing the gradient. */
+  color: #C5A880;
   background: linear-gradient(135deg, #DFBA8C 0%, #C5A880 50%, #A98C60 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
