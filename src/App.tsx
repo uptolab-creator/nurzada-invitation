@@ -140,14 +140,24 @@ export default function App() {
           </div>
 
           {/* Bride Name Title in High-End Script Calligraphy with scale/fade animation */}
-          <h1 className="font-script text-6xl sm:text-7xl text-brand-primary tracking-wide text-gold-gradient py-2">
-            <TypewriterText text={t.title} mode="slide-right" delay={0.2} once={false} />
-          </h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="font-script text-6xl sm:text-7xl text-brand-primary tracking-wide text-gold-gradient py-2"
+          >
+            {t.title}
+          </motion.h1>
 
           {/* Subtitle / Ceremony name (Qyz Uzatuu) */}
-          <h2 className="font-serif text-xl sm:text-2xl font-semibold uppercase tracking-[0.18em] text-brand-accent mt-3 mb-6 text-center">
-            <TypewriterText text={t.subtitle} mode="reveal" delay={0.7} once={false} />
-          </h2>
+          <motion.h2
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.5 }}
+            className="font-serif text-xl sm:text-2xl font-semibold uppercase tracking-[0.18em] text-brand-accent mt-3 mb-6 text-center"
+          >
+            {t.subtitle}
+          </motion.h2>
 
           <div className="w-32">
             <DividingOrnament />

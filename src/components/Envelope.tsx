@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { TundukOrnament } from './EthnicOrnaments';
-import { TypewriterText } from './TypewriterText';
 import { translations } from '../data';
 
 interface EnvelopeProps {
@@ -53,13 +52,23 @@ export const Envelope: React.FC<EnvelopeProps> = ({ onOpen, lang, setLang }) => 
 
           {/* Center Calligraphy Text: Bride's name above ceremony name */}
           <div className="text-center my-auto py-2 flex flex-col items-center justify-center">
-            <h1 className="font-script text-4xl sm:text-5xl text-brand-primary tracking-wide text-gold-gradient py-1">
-              <TypewriterText text={t.title} mode="slide-right" delay={0.2} once={false} />
-            </h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="font-script text-4xl sm:text-5xl text-brand-primary tracking-wide text-gold-gradient py-1"
+            >
+              {t.title}
+            </motion.h1>
             <div className="w-16 h-[1px] bg-brand-accent/40 my-3" />
-            <h2 className="font-serif text-lg sm:text-xl font-semibold uppercase tracking-[0.18em] text-brand-accent select-none">
-              <TypewriterText text={t.subtitle} mode="reveal" delay={0.7} once={false} />
-            </h2>
+            <motion.h2
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.5 }}
+              className="font-serif text-lg sm:text-xl font-semibold uppercase tracking-[0.18em] text-brand-accent select-none"
+            >
+              {t.subtitle}
+            </motion.h2>
           </div>
 
           {/* Decorative Wax Seal (Static & Elegant) */}
