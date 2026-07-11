@@ -40,16 +40,12 @@ export const RsvpSection: React.FC<RsvpSectionProps> = ({ t }) => {
     localStorage.setItem('nurzada_qyz_uzatuu_rsvps', JSON.stringify(updated));
   };
 
-  // Sends the RSVP to a Google Sheets Apps Script webhook (acts as a shared database).
-  // Fire-and-forget with mode: 'no-cors' since Apps Script doesn't return CORS headers.
+  // Sends the RSVP to our /api/rsvp serverless function, which appends it to the
+  // Google Sheet via the Sheets API. Fire-and-forget: don't block the UI on it.
   const sendToGoogleSheet = (rsvp: RSVP) => {
-    const webhookUrl = import.meta.env.VITE_SHEETS_WEBHOOK_URL;
-    if (!webhookUrl) return;
-
-    fetch(webhookUrl, {
+    fetch('/api/rsvp', {
       method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(rsvp),
     }).catch((err) => console.error('Failed to sync RSVP to Google Sheet', err));
   };
