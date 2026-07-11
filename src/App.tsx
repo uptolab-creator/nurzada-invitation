@@ -32,6 +32,15 @@ export default function App() {
 
   const galleryImages = [galleryImage1, galleryImage2, galleryImage3];
 
+  // Preload every gallery photo into the browser cache as soon as the app loads,
+  // so switching slides in the carousel never has to wait on a network request.
+  useEffect(() => {
+    galleryImages.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
   useEffect(() => {
     if (!isEnvelopeOpen) return;
     const timer = setInterval(() => {
