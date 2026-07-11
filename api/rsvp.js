@@ -1,10 +1,10 @@
-const { google } = require('googleapis');
+import { google } from 'googleapis';
 
 const SPREADSHEET_ID = '1Gi2n6idfXrxUXw4DbQ2TPWC07RGTLkBh4U-UtKz8o3A';
 const SHEET_NAME = 'Лист1';
 const HEADER_ROW = ['Имя', 'Придёт', 'Сопровождающий', 'Дата отправки'];
 
-module.exports = async function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
     return;
@@ -58,4 +58,4 @@ module.exports = async function handler(req, res) {
     console.error('Failed to append RSVP to Google Sheet', err);
     res.status(500).json({ error: 'Failed to save RSVP' });
   }
-};
+}
