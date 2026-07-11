@@ -20,22 +20,17 @@ import {
   KyrgyzVerticalOimo
 } from './components/EthnicOrnaments';
 
-import brideImage from './assets/images/bride_portrait_1783759362357.jpg';
-import img2 from './assets/images/bride_portrait_two_1783767637172.jpg';
-import img3 from './assets/images/bride_portrait_three_1783767660550.jpg';
-import img4 from './assets/images/bride_portrait_four_1783767676049.jpg';
+import galleryImage1 from './assets/images/gallery_1.jpg';
+import galleryImage2 from './assets/images/gallery_2.jpg';
+import galleryImage3 from './assets/images/gallery_3.jpg';
 
 export default function App() {
   const [lang, setLang] = useState<Language>('ru');
   const [isEnvelopeOpen, setIsEnvelopeOpen] = useState(false);
   const [playTrigger, setPlayTrigger] = useState(false);
-  const [localBrideImage, setLocalBrideImage] = useState<string | null>(() => {
-    return localStorage.getItem('bride_image_base64');
-  });
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const images = [brideImage, img2, img3, img4];
-  const galleryImages = localBrideImage ? [localBrideImage, img2, img3, img4] : images;
+  const galleryImages = [galleryImage1, galleryImage2, galleryImage3];
 
   useEffect(() => {
     if (!isEnvelopeOpen) return;
@@ -257,51 +252,6 @@ export default function App() {
                 ))}
               </div>
 
-              {/* Upload Original Photo Widget (allows loading the real photo as is, saved in localStorage) */}
-              <label className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-brand-parchment/95 hover:bg-white text-brand-primary border border-brand-accent/40 rounded-full py-1.5 px-3 shadow-md cursor-pointer transition-all hover:scale-105 z-30 flex items-center justify-center gap-1.5 text-[9px] uppercase font-bold tracking-wider whitespace-nowrap">
-                <input 
-                  type="file" 
-                  accept="image/*" 
-                  className="hidden" 
-                  onChange={(e) => {
-                    const file = e.target.files?.[0];
-                    if (file) {
-                      const reader = new FileReader();
-                      reader.onload = (event) => {
-                        if (event.target?.result) {
-                          const base64 = event.target.result as string;
-                          localStorage.setItem('bride_image_base64', base64);
-                          setLocalBrideImage(base64);
-                          setCurrentImageIndex(0); // reset to show uploaded
-                        }
-                      };
-                      reader.readAsDataURL(file);
-                    }
-                  }}
-                />
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <span>{localBrideImage ? 'Изменить фото' : 'Поставить оригинал'}</span>
-              </label>
-
-              {/* Reset Custom Photo Button */}
-              {localBrideImage && (
-                <button 
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    localStorage.removeItem('bride_image_base64');
-                    setLocalBrideImage(null);
-                  }}
-                  className="absolute top-2 right-2 bg-brand-burgundy text-white rounded-full p-1.5 shadow-md hover:bg-red-700 transition-all z-30"
-                  title="Удалить фото"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                  </svg>
-                </button>
-              )}
             </motion.div>
             
 
