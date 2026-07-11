@@ -40,6 +40,20 @@ export const RsvpSection: React.FC<RsvpSectionProps> = ({ t }) => {
     localStorage.setItem('nurzada_qyz_uzatuu_rsvps', JSON.stringify(updated));
   };
 
+  // Sends the RSVP to a Google Sheets Apps Script webhook (acts as a shared database).
+  // Fire-and-forget with mode: 'no-cors' since Apps Script doesn't return CORS headers.
+  const sendToGoogleSheet = (rsvp: RSVP) => {
+    const webhookUrl = import.meta.env.VITE_SHEETS_WEBHOOK_URL;
+    if (!webhookUrl) return;
+
+    fetch(webhookUrl, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(rsvp),
+    }).catch((err) => console.error('Failed to sync RSVP to Google Sheet', err));
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim()) return;
@@ -56,6 +70,7 @@ export const RsvpSection: React.FC<RsvpSectionProps> = ({ t }) => {
 
     const updated = [newRsvp, ...rsvps];
     saveRsvps(updated);
+    sendToGoogleSheet(newRsvp);
     setSubmitted(true);
   };
 
