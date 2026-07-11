@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { TundukOrnament } from './EthnicOrnaments';
+import { TypewriterText } from './TypewriterText';
+import { translations } from '../data';
 import { RSVP } from '../types';
 
 interface EnvelopeProps {
@@ -84,6 +86,8 @@ export const Envelope: React.FC<EnvelopeProps> = ({ onOpen, lang, setLang }) => 
   const totalGuestsComing = totalAttendees + plusOnesCount;
   const notComingCount = rsvps.filter(r => !r.willAttend).length;
 
+  const t = translations[lang];
+
   const handleLanguageSelect = (selectedLang: 'ru' | 'ky' | 'en') => {
     setLang(selectedLang);
     setIsOpening(true);
@@ -120,14 +124,14 @@ export const Envelope: React.FC<EnvelopeProps> = ({ onOpen, lang, setLang }) => 
           {/* Spacer to align center content */}
           <div className="h-4" />
 
-          {/* Center Calligraphy / Serif Text: Чакыруу / Приглашение */}
+          {/* Center Calligraphy Text: Bride's name above ceremony name */}
           <div className="text-center my-auto py-2 flex flex-col items-center justify-center">
-            <h1 className="font-serif text-3xl sm:text-4xl text-brand-primary font-bold tracking-[0.2em] text-gold-gradient select-none uppercase">
-              Чакыруу
+            <h1 className="font-script text-4xl sm:text-5xl text-brand-primary tracking-wide text-gold-gradient py-1">
+              <TypewriterText text={t.title} mode="slide-right" delay={0.2} once={false} />
             </h1>
             <div className="w-16 h-[1px] bg-brand-accent/40 my-3" />
-            <h2 className="font-serif text-2xl sm:text-3xl text-brand-primary font-medium tracking-[0.2em] text-gold-gradient select-none uppercase">
-              Приглашение
+            <h2 className="font-serif text-lg sm:text-xl font-semibold uppercase tracking-[0.18em] text-brand-accent select-none">
+              <TypewriterText text={t.subtitle} mode="reveal" delay={0.7} once={false} />
             </h2>
           </div>
 
