@@ -35,26 +35,10 @@ export const translations: Record<'ru' | 'ky' | 'en', Translation> = {
     eveningEndTime: "22:00",
     programTitle: "Программа вечера",
     programItems: [
-      {
-        time: "16:00",
-        title: "Сбор гостей",
-        desc: "Встреча дорогих родственников и друзей в праздничной атмосфере."
-      },
-      {
-        time: "16:00 – 17:30",
-        title: "Фуршет & Фотосессия",
-        desc: "Приветственные напитки, изысканные угощения и памятные фотографии с невестой."
-      },
-      {
-        time: "17:30",
-        title: "Начало торжества",
-        desc: "Официальная часть вечера, обряды благословения и праздничная программа."
-      },
-      {
-        time: "22:00",
-        title: "Завершение вечера",
-        desc: "Финальные аккорды праздника и тёплые слова прощания перед новой главой жизни."
-      }
+      { time: "16:00", title: "Сбор гостей" },
+      { time: "16:00 – 17:30", title: "Фуршет & Фотосессия" },
+      { time: "17:30", title: "Начало торжества" },
+      { time: "22:00", title: "Завершение вечера" }
     ],
     dressCodeTitle: "Dress Code",
     dressCodeDesc: "Будем рады, если вы поддержите атмосферу нашего вечера, выбрав наряды в теплых природных оттенках.",
@@ -121,26 +105,10 @@ export const translations: Record<'ru' | 'ky' | 'en', Translation> = {
     eveningEndTime: "22:00",
     programTitle: "Той программасы",
     programItems: [
-      {
-        time: "16:00",
-        title: "Коноктордун жыйыны",
-        desc: "Кадырлуу конокторубузду салтанаттуу тосуп алуу жана ак тилектердин башталышы."
-      },
-      {
-        time: "16:00 – 17:30",
-        title: "Фуршет & Сүрөткө түшүү",
-        desc: "Фуршет, шириндиктер жана колукту Нурзада менен эстеликке кооз сүрөттөр."
-      },
-      {
-        time: "17:30",
-        title: "Тойдун башталышы",
-        desc: "Салтанаттын расмий ачылышы, бата берүү аземдери жана шаңдуу кече."
-      },
-      {
-        time: "22:00",
-        title: "Тойдун аякташы",
-        desc: "Жакшы маанайдагы каалоо-тилектер менен кеченин салтанаттуу жыйынтыкталышы."
-      }
+      { time: "16:00", title: "Коноктордун жыйыны" },
+      { time: "16:00 – 17:30", title: "Фуршет & Сүрөткө түшүү" },
+      { time: "17:30", title: "Тойдун башталышы" },
+      { time: "22:00", title: "Тойдун аякташы" }
     ],
     dressCodeTitle: "Dress Code",
     dressCodeDesc: "Биздин кеченин жылуу жана назик маанайын толуктап, табигый жылуу түстөгү кийимдерди тандасаңыз, абдан кубанычта болобуз.",
@@ -169,9 +137,9 @@ export const translations: Record<'ru' | 'ky' | 'en', Translation> = {
     rsvpSuccessTitle: "Рахмат!",
     rsvpSuccessDesc: "Сиздин жообуңуз ийгиликтүү катталды. Сизди кубануу менен күтөбүз!",
     rsvpSubmitAnother: "Жаңы жооп жөнөтүү",
-    finalMessage: "Бул өзгөть күнүбүздү сиздер менен бирге өткөрүү биз үчүн чоң бакыт.",
+    finalMessage: "Бул өзгөчө күнүбүздү сиздер менен бирге өткөрүү биз үчүн чоң бакыт.",
     loveLabel: "Терең урматтоо менен,",
-    hostsNames: "Гулнур жана Акыл"
+    hostsNames: "Акыл жана Гулнур"
   },
   en: {
     title: "Nurzada",
@@ -207,26 +175,10 @@ export const translations: Record<'ru' | 'ky' | 'en', Translation> = {
     eveningEndTime: "22:00",
     programTitle: "Evening Program",
     programItems: [
-      {
-        time: "16:00",
-        title: "Guest Arrival",
-        desc: "Welcoming our dear relatives and friends in a celebratory atmosphere."
-      },
-      {
-        time: "16:00 – 17:30",
-        title: "Buffet & Photo Session",
-        desc: "Welcome drinks, exquisite refreshments, and memorable photographs with the beautiful bride."
-      },
-      {
-        time: "17:30",
-        title: "The Ceremony Begins",
-        desc: "Official commencement of the celebration, blessing ceremonies, and traditional program."
-      },
-      {
-        time: "22:00",
-        title: "Closing of the Evening",
-        desc: "Concluding words, beautiful farewell wishes, and the start of an exciting new chapter."
-      }
+      { time: "16:00", title: "Guest Arrival" },
+      { time: "16:00 – 17:30", title: "Buffet & Photo Session" },
+      { time: "17:30", title: "The Ceremony Begins" },
+      { time: "22:00", title: "Closing of the Evening" }
     ],
     dressCodeTitle: "Dress Code",
     dressCodeDesc: "We would be absolutely delighted if you support the warm atmosphere of our evening by choosing attire in natural warm shades.",

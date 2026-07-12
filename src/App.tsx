@@ -355,9 +355,6 @@ export default function App() {
                 <h4 className="font-serif text-base font-bold text-brand-primary">
                   {item.title}
                 </h4>
-                <p className="text-xs text-brand-primary/70 mt-1 leading-relaxed">
-                  {item.desc}
-                </p>
               </motion.div>
             ))}
           </div>

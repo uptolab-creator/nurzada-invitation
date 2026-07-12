@@ -185,6 +185,10 @@ export const TypewriterText: React.FC<TypewriterTextProps> = ({
 
   return (
     <motion.span
+      // Remount on text change (e.g. language switch) so the reveal animation
+      // always restarts cleanly instead of getting stuck mid-transition with
+      // stale "hidden"/"visible" state from the previous language's text.
+      key={text}
       className={`inline-block select-none ${className}`}
       variants={containerVariants}
       initial="hidden"

@@ -45,7 +45,6 @@ export interface Translation {
   programItems: {
     time: string;
     title: string;
-    desc: string;
   }[];
   dressCodeTitle: string;
   dressCodeDesc: string;
