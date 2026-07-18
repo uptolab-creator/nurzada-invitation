@@ -114,8 +114,8 @@ export const translations: Record<'ru' | 'ky' | 'en', Translation> = {
       { time: "22:00", title: "Тойдун аягы — Бата менен кечени жыйынтыктоо" }
     ],
     dressCodeTitle: "Dress Code",
-    dressCodeDesc: "Биздин кеченин жылуу жана назик маанайын толуктап, табигый жылуу түстөгү кийимдерди тандасаңыз, абдан кубанычта болобуз.",
-    dressCodePalette: "Түстөр палитрасы:",
+    dressCodeDesc: "Жаркыраган маанай жана табигый түстөгү кийим менен тойдун көркү болуп кетиңиз!",
+    dressCodePalette: "Түстөрдүн түрү:",
     colors: {
       burgundy: "Бордо",
       beige: "Беж",
@@ -127,8 +127,8 @@ export const translations: Record<'ru' | 'ky' | 'en', Translation> = {
       darkGreen: "Кочкул жашыл"
     },
     rsvpTitle: "Катышууну ырастоо",
-    rsvpSubtitle: "Катышууңуз тууралуу алдын ала кабарлап коюңузду суранабыз",
     rsvpDeadline: "2026-жылдын 15-августуна чейин",
+    rsvpSubtitle: "Катыша аларыңызды алдын ала кабарлап коюңузду өтүнөбүз",
     rsvpNameLabel: "Аты-жөнүңүз",
     rsvpNamePlaceholder: "Атыңызды жазыңыз",
     rsvpWillAttendLabel: "Катыша аласызбы?",
