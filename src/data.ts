@@ -127,10 +127,10 @@ export const translations: Record<'ru' | 'ky' | 'en', Translation> = {
       darkGreen: "Кочкул жашыл"
     },
     rsvpTitle: "Катышууну ырастоо",
-    rsvpDeadline: "2026-жылдын 15-августуна чейин",
+    rsvpDeadline: "2026-ЖЫЛДЫН 15-АВГУСТУНА ЧЕЙИН",
     rsvpSubtitle: "Катыша аларыңызды алдын ала кабарлап коюңузду өтүнөбүз",
     rsvpNameLabel: "Аты-жөнүңүз",
-    rsvpNamePlaceholder: "Атыңызды жазыңыз",
+    rsvpNamePlaceholder: "Ысымыңызды жазыңыз",
     rsvpWillAttendLabel: "Катыша аласызбы?",
     rsvpYes: "Ооба, бара алам",
     rsvpNo: "Тилекке каршы, бара албайм",
@@ -140,9 +140,9 @@ export const translations: Record<'ru' | 'ky' | 'en', Translation> = {
     rsvpSuccessTitle: "Рахмат!",
     rsvpSuccessDesc: "Сиздин жообуңуз ийгиликтүү катталды. Сизди кубануу менен күтөбүз!",
     rsvpSubmitAnother: "Жаңы жооп жөнөтүү",
-    finalMessage: "Бул өзгөчө күнүбүздү сиздер менен бирге өткөрүү биз үчүн чоң бакыт.",
+    finalMessage: "Алгачкы жакшылыгыбызга ортоктош болуп, батаңыздарды алуу биз үчүн чоң бакыт.",
     loveLabel: "Терең урматтоо менен,",
-    hostsNames: "Акыл жана Гулнур"
+    hostsNames: "Акыл&Гүлнур"
   },
   en: {
     title: "Nurzada",
