@@ -347,9 +347,11 @@ export default function App() {
                 </span>
                 
                 {/* Time bubble */}
-                <div className="inline-block bg-brand-primary text-brand-parchment text-xs font-bold px-3 py-1 rounded-full mb-2 tracking-wider">
-                  {item.time}
-                </div>
+                {item.time && (
+                  <div className="inline-block bg-brand-primary text-brand-parchment text-xs font-bold px-3 py-1 rounded-full mb-2 tracking-wider">
+                    {item.time}
+                  </div>
+                )}
                 
                 {/* Item Details */}
                 <h4 className="font-serif text-base font-bold text-brand-primary">
