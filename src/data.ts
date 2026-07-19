@@ -69,7 +69,7 @@ export const translations: Record<'ru' | 'ky' | 'en', Translation> = {
     rsvpSubmitAnother: "Отправить еще один ответ",
     finalMessage: "Будем счастливы разделить этот особенный день вместе с вами.",
     loveLabel: "С любовью,",
-    hostsNames: "Акыл и Гулнур"
+    hostsNames: "Акыл и Гүлнур"
   },
   ky: {
     title: "Нурзада",
@@ -142,7 +142,7 @@ export const translations: Record<'ru' | 'ky' | 'en', Translation> = {
     rsvpSubmitAnother: "Жаңы жооп жөнөтүү",
     finalMessage: "Алгачкы жакшылыгыбызга ортоктош болуп, батаңыздарды алуу биз үчүн чоң бакыт.",
     loveLabel: "Терең урматтоо менен,",
-    hostsNames: "Акыл&Гүлнур"
+    hostsNames: "Акыл&Гулнур"
   },
   en: {
     title: "Nurzada",
