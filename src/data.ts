@@ -103,7 +103,7 @@ export const translations: Record<'ru' | 'ky' | 'en', Translation> = {
     officialStartTime: "17:30",
     eveningEndLabel: "Тойдун аякташы:",
     eveningEndTime: "22:00",
-    programTitle: "Той программасы",
+    programTitle: "Той расмиси",
     programItems: [
       { time: "16:00", title: "Тойдун башаты — Конокторду тосуп алуу" },
       { time: "16:00 – 17:30", title: "Даам сызуу жана жакшылык ээси Нурзада менен эстеликке сүрөткө түшүү" },
