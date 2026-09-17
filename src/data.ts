@@ -55,7 +55,7 @@ export const translations: Record<'ru' | 'ky' | 'en', Translation> = {
     },
     rsvpTitle: "Подтверждение",
     rsvpSubtitle: "Пожалуйста, подтвердите свое присутствие",
-    rsvpDeadline: "до 15 августа 2026 года",
+    rsvpDeadline: "до 25 августа 2026 года",
     rsvpNameLabel: "Имя и фамилия",
     rsvpNamePlaceholder: "Введите ваше имя",
     rsvpWillAttendLabel: "Планируете ли вы присутствовать?",
@@ -69,7 +69,7 @@ export const translations: Record<'ru' | 'ky' | 'en', Translation> = {
     rsvpSubmitAnother: "Отправить еще один ответ",
     finalMessage: "Будем счастливы разделить этот особенный день вместе с вами.",
     loveLabel: "С любовью,",
-    hostsNames: "Акыл и Гүлнур"
+    hostsNames: "Акыл и Гулнур"
   },
   ky: {
     title: "Нурзада",
@@ -127,7 +127,7 @@ export const translations: Record<'ru' | 'ky' | 'en', Translation> = {
       darkGreen: "Кочкул жашыл"
     },
     rsvpTitle: "Катышууну ырастоо",
-    rsvpDeadline: "2026-ЖЫЛДЫН 15-АВГУСТУНА ЧЕЙИН",
+    rsvpDeadline: "2026-ЖЫЛДЫН 25-АВГУСТУНА ЧЕЙИН",
     rsvpSubtitle: "Катыша аларыңызды алдын ала кабарлап коюңузду өтүнөбүз",
     rsvpNameLabel: "Аты-жөнүңүз",
     rsvpNamePlaceholder: "Ысымыңызды жазыңыз",
@@ -198,7 +198,7 @@ export const translations: Record<'ru' | 'ky' | 'en', Translation> = {
     },
     rsvpTitle: "RSVP",
     rsvpSubtitle: "Please confirm your presence",
-    rsvpDeadline: "by August 15, 2026",
+    rsvpDeadline: "by August 25, 2026",
     rsvpNameLabel: "First and last name",
     rsvpNamePlaceholder: "Your full name",
     rsvpWillAttendLabel: "Will you attend?",
